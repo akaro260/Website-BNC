@@ -16,7 +16,7 @@ body {
   display: flex;
   align-items: center;
   background: linear-gradient( rgba(0, 0, 0, 0.781)),
-              url('FOTO/snaptik_7633464558727810312_5_v2.jpeg');
+              url('FOTO/RobloxScreenShot20251227_215409095.png');
 
   background-position: center;
   background-size: cover;
@@ -30,6 +30,10 @@ body {
   color: rgba(245, 244, 244, 0.7);
   font-size: 18px;
   max-width: 500px;
+}
+.hero h1 {
+  font-size: 3rem;
+  letter-spacing: 1px;
 }
 
 /* MOBILE FIX */
@@ -72,6 +76,7 @@ body {
 }
 .feature-box:hover {
   transform: translateY(-8px);
+    background: rgba(255,255,255,0.05);
 }
 
 .icon {
@@ -112,3 +117,34 @@ body::after {
   background-image:url("https://grainy-gradients.vercel.app/noise.svg");
   opacity:0.05;
 }
+.role-line {
+  color: #fff;
+}
+
+.role-line .line {
+  width: 2px;
+  height: 50px;
+  background: rgba(255,255,255,0.5);
+  margin: 0 auto 10px;
+}
+
+/* PANAH */
+.arrow {
+  display: block;
+  transform: rotate(90deg); /* ini bikin > jadi ke bawah */
+  font-size: 20px;
+  margin-bottom: 5px;
+  opacity: 0.7;
+
+}
+.news-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.news-card:hover {
+  transform: translateY(-6px);
+}
+
