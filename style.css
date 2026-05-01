@@ -1,0 +1,114 @@
+body {
+  background: #050505;
+  color: white;
+  font-family: sans-serif;
+}
+
+/* NAV */
+.navbar {
+  backdrop-filter: blur(10px);
+}
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  padding-top: 90px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient( rgba(0, 0, 0, 0.781)),
+              url('FOTO/snaptik_7633464558727810312_5_v2.jpeg');
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.hero-img {
+  max-width: 90%;
+  height: auto;
+}
+.text-fandom {
+  color: rgba(245, 244, 244, 0.7);
+  font-size: 18px;
+  max-width: 500px;
+}
+
+/* MOBILE FIX */
+@media (max-width: 991px) {
+  .hero {
+    text-align: center;
+  }
+
+  .hero-img {
+    max-width: 70%;
+  }
+}
+.glow {
+  text-shadow: 0 0 15px rgba(255,255,255,0.2);
+}
+
+/* BUTTON */
+.btn-discord-outline {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 8px 18px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+.btn-discord-outline:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: #fff;
+  color: #fff;
+}
+/* FEATURE */
+.feature-box {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 15px;
+  backdrop-filter: blur(6px);
+  transition: 0.3s;
+}
+.feature-box:hover {
+  transform: translateY(-8px);
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: rgba(255,255,255,0.08);
+  border-radius: 50%;
+  font-size: 20px;
+}
+
+/* NEWS */
+.news-card img {
+  border-radius: 10px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-dark {
+  background: #0f0f0f;
+  border: 1px solid #222;
+}
+
+/* CTA */
+.cta {
+  background: linear-gradient(90deg,#111,#000);
+  border-radius: 15px;
+}
+
+/* NOISE */
+body::after {
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  background-image:url("https://grainy-gradients.vercel.app/noise.svg");
+  opacity:0.05;
+}
