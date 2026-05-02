@@ -33,11 +33,11 @@
 
       <div class="collapse navbar-collapse" id="nav">
         <ul class="navbar-nav mx-auto">
-          <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
-          <li class="nav-item"><a href="#about" class="nav-link">Features</a></li>
-          <li class="nav-item"><a href="#events" class="nav-link">Admin</a></li>
-          <li class="nav-item"><a href="#gallery" class="nav-link">Rules</a></li>
-          <li class="nav-item"><a href="#rules" class="nav-link">Gallery</a></li>
+          <li class="nav-item"><a href="#home" class="nav-link ">Home</a></li>
+          <li class="nav-item"><a href="#features" class="nav-link">Features</a></li>
+          <li class="nav-item"><a href="#admin" class="nav-link">Admin</a></li>
+          <li class="nav-item"><a href="#rules" class="nav-link">Rules</a></li>
+          <li class="nav-item"><a href="#gallery" class="nav-link">Gallery</a></li>
         </ul>
 
         <a href="https://discord.gg/yd47HEv3Up" class="btn btn-discord-outline">
@@ -48,7 +48,7 @@
   </nav>
 
   <!-- HERO -->
-  <section class="hero ">
+  <section class="hero " id="home">
     <div class="container">
       <div class="row align-items-center">
 
@@ -77,7 +77,7 @@
   </section>
 
   <!-- FEATURES -->
-<section class="py-5 Features">
+<section class="py-5 Features" id="features">
   <div class="container">
 
     <h3 class="text-center text-white mb-5">
@@ -153,7 +153,7 @@
 </section>
 
   <!-- ADMIN -->
-  <section class="py-5 Admin">
+  <section class="py-5 Admin" id="admin">
     <div class="container">
       <h3 class="mb-4 text-center mb-3">Admin BNC</h3>
 
@@ -262,7 +262,7 @@
   </section>
 
   <!-- RULES -->
-  <section class="py-5 Rules">
+  <section class="py-5 Rules" id="rules">
   <div class="container">
 
     <!-- TITLE -->
@@ -331,7 +331,7 @@
   </div>
 </section>
 
-<section class="py-5 Gallery">
+<section class="py-5 Gallery" id="gallery">
   <div class="container">
 
     <h3 class="text-center text-white mb-5">
@@ -416,5 +416,28 @@
       new bootstrap.Modal(document.getElementById('imgModal')).show();
     });
   });
+  const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav-link");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+
+  sections.forEach(section => {
+    const top = section.offsetTop - 120;
+    const height = section.offsetHeight;
+
+    if (window.scrollY >= top && window.scrollY < top + height) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+
+    if (link.getAttribute("href") === "#" + current) {
+      link.classList.add("active");
+    }
+  });
+});
 </script>
 </html>

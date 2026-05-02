@@ -8,7 +8,15 @@ body {
 .navbar {
   backdrop-filter: blur(10px);
 }
+.nav-link {
+  color: rgba(255, 255, 255, 0.6);
+  transition: 0.2s ease;
+}
 
+.nav-link.active {
+  color: #fff;
+  font-weight: 600;
+}
 /* HERO */
 .hero ,h1{
   font-family: 'Orbitron', sans-serif;
