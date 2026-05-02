@@ -1,7 +1,7 @@
 body {
   background: #050505;
   color: white;
-  font-family: sans-serif;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 /* NAV */
@@ -10,14 +10,16 @@ body {
 }
 
 /* HERO */
+.hero ,h1{
+  font-family: 'Orbitron', sans-serif;
+}
 .hero {
   min-height: 100vh;
   padding-top: 90px;
   display: flex;
   align-items: center;
-  background: linear-gradient( rgba(0, 0, 0, 0.781)),
-              url('FOTO/RobloxScreenShot20251227_215409095.png');
-
+background: linear-gradient(rgba(0, 0, 0, 0.87), rgba(0,0,0,0.7)),
+            url('FOTO/RobloxScreenShot20251227_215409095.png');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -66,18 +68,6 @@ body {
   border-color: #fff;
   color: #fff;
 }
-/* FEATURE */
-.feature-box {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 15px;
-  backdrop-filter: blur(6px);
-  transition: 0.3s;
-}
-.feature-box:hover {
-  transform: translateY(-8px);
-    background: rgba(255,255,255,0.05);
-}
 
 .icon {
   width: 50px;
@@ -95,6 +85,7 @@ body {
   border-radius: 10px;
   height: 200px;
   object-fit: cover;
+    backdrop-filter: blur(10px);
 }
 
 .card-dark {
@@ -145,7 +136,9 @@ body::after {
 }
 
 .news-card:hover {
-  transform: translateY(-6px);
+  transition: 0.3s ease;
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
 }
 
 /* bnc rule */
@@ -195,21 +188,68 @@ body::after {
 }
 
 .feature-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  transition: 0.3s ease;
 }
 
 .feature-card h5 {
   margin-bottom: 10px;
 }
 .gallery-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
   border-radius: 12px;
   transition: 0.3s;
-  cursor: pointer;
-  width: 750px;
-  height: 300px;
 }
 
 .gallery-img:hover {
   transform: scale(1.05);
   opacity: 0.9;
+}
+
+.Admin,h3{
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 1.5px;
+}
+/* bikin background modal lebih gelap & clean */
+.modal-content {
+  background: transparent;
+  border: none;
+}
+
+/* gambar di dalam modal */
+#modalImage {
+  max-width: 100%;
+  max-height: 85vh;
+  object-fit: contain;
+  display: block;
+  margin: auto;
+  border-radius: 10px;
+}
+
+/* biar modal background lebih soft */
+.modal-backdrop.show {
+  opacity: 0.85;
+  background-color: #000;
+}
+
+/* optional: cursor zoom di gallery */
+.gallery-img {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.gallery-img:hover {
+  transform: scale(1.03);
+}
+
+.modal.fade .modal-dialog {
+  transform: scale(0.9);
+  transition: transform 0.2s ease;
+}
+
+.modal.show .modal-dialog {
+  transform: scale(1);
 }
